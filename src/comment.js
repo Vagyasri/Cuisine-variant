@@ -17,4 +17,4 @@ const display = () => {
     <p class="com-count">comment counts</p>`;
 };
 
-export default display();
+export default display;
