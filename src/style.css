@@ -23,6 +23,26 @@ body {
   color: black;
 }
 
+.popup-bottom {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 500px;
+}
+
+.userName {
+  padding: 5px;
+  align-self: center;
+}
+
+.userComment {
+  margin: 15px 0;
+}
+
+.comm-sub {
+  padding: 5px;
+  align-self: flex-end;
+}
+
 footer {
   position: fixed;
   bottom: 0;

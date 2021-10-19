@@ -1,11 +1,3 @@
-// const getMeal = fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`);
-
-// const getComment = async () => {
-//   const response = await fetch(getMeal);
-//   const data = await response.json();
-//   return data;
-// };
-
 const commentSection = document.querySelector('.comment-popup');
 
 const display = () => {
@@ -18,16 +10,18 @@ const display = () => {
   const userComment = document.createElement('textarea');
   const commentSubmit = document.createElement('button');
 
+  bottomPart.classList = 'popup-bottom';
+
   userName.type = 'text';
-  userName.class = 'userName';
-  userName.id = 'text';
-  userName.name = 'text';
+  userName.classList = 'userName';
+  userName.id = 'name-id';
+  userName.name = 'user-name';
   userName.placeholder = 'Type Your Name';
   userName.required = true;
 
-  userComment.class = 'userComment';
-  userComment.id = 'text';
-  userComment.name = 'text';
+  userComment.classList = 'userComment';
+  userComment.id = 'comment-id';
+  userComment.name = 'comment-name';
   userComment.placeholder = 'Comment here ...';
   userComment.rows = '10';
   userComment.cols = '50';
@@ -35,6 +29,7 @@ const display = () => {
 
   commentSubmit.type = 'submit';
   commentSubmit.innerText = 'Submit';
+  commentSubmit.classList = 'comm-sub';
 
   topPart.appendChild(mealName);
   topPart.appendChild(mealImage);
