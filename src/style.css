@@ -63,3 +63,7 @@ footer {
   background: #6cf;
   text-align: center;
 }
+
+button {
+  cursor: pointer;
+}
