@@ -14,7 +14,7 @@ const display = () => {
     <button type="submit" class="comm-sub">Submit</button>
     </form>
     <ul class="comment-list"> </ul>
-    <p>comment counts</p>`;
+    <p class="com-count">comment counts</p>`;
 };
 
 export default display();

@@ -50,6 +50,10 @@ body {
   align-self: flex-end;
 }
 
+.com-count {
+  text-align: center;
+}
+
 footer {
   position: fixed;
   bottom: 0;
