@@ -21,3 +21,13 @@ body {
 .header-list li a {
   color: black;
 }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  height: 60px;
+  background: #6cf;
+  text-align: center;
+}
