@@ -10,6 +10,7 @@ body {
 .header-list {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .header-list li {
