@@ -116,17 +116,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _Images_logo_small_jpeg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Images/logo-small.jpeg */ \"./src/Images/logo-small.jpeg\");\n\n\n\nfunction component() {\n  const element = document.createElement('div');\n\n  const myIcon = new Image();\n  myIcon.src = _Images_logo_small_jpeg__WEBPACK_IMPORTED_MODULE_1__;\n\n  element.appendChild(myIcon);\n\n  return element;\n}\n\ndocument.body.appendChild(component());\n\n//# sourceURL=webpack://cusine-variant/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _Img_logo_small_jpeg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Img/logo-small.jpeg */ \"./src/Img/logo-small.jpeg\");\n\n\n\nconst element = document.querySelector('.logo');\nfunction component() {\n  const image = document.createElement('div');\n\n  const myIcon = new Image();\n  myIcon.src = _Img_logo_small_jpeg__WEBPACK_IMPORTED_MODULE_1__;\n\n  image.appendChild(myIcon);\n\n  return image;\n}\n\nelement.appendChild(component());\n\n//# sourceURL=webpack://cusine-variant/./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/Images/logo-small.jpeg":
-/*!************************************!*\
-  !*** ./src/Images/logo-small.jpeg ***!
-  \************************************/
+/***/ "./src/Img/logo-small.jpeg":
+/*!*********************************!*\
+  !*** ./src/Img/logo-small.jpeg ***!
+  \*********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"7d243edf052a9de2a6d2.jpeg\";\n\n//# sourceURL=webpack://cusine-variant/./src/Images/logo-small.jpeg?");
+eval("module.exports = __webpack_require__.p + \"7d243edf052a9de2a6d2.jpeg\";\n\n//# sourceURL=webpack://cusine-variant/./src/Img/logo-small.jpeg?");
 
 /***/ })
 

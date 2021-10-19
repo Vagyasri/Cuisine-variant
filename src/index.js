@@ -1,5 +1,5 @@
 import './style.css';
-import Icon from './Images/logo-small.jpeg';
+import Icon from './Img/logo-small.jpeg';
 
 const element = document.querySelector('.logo');
 function component() {
