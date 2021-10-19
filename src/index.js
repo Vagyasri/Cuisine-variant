@@ -1,15 +1,16 @@
 import './style.css';
-import Icon from './logo-small.jpeg';
+import Icon from './Images/logo-small.jpeg';
 
+const element = document.querySelector('.logo');
 function component() {
-  const element = document.createElement('div');
+  const image = document.createElement('div');
 
   const myIcon = new Image();
   myIcon.src = Icon;
 
-  element.appendChild(myIcon);
+  image.appendChild(myIcon);
 
-  return element;
+  return image;
 }
 
-document.body.appendChild(component());
+element.appendChild(component());
