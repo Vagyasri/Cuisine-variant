@@ -1,44 +1,18 @@
 const commentSection = document.querySelector('.comment-popup');
 
 const display = () => {
-  const topPart = document.createElement('div');
-  const mealName = document.createElement('h3');
-  const mealImage = document.createElement('img');
-  const ingredients = document.createElement('p');
-  const bottomPart = document.createElement('form');
-  const userName = document.createElement('input');
-  const userComment = document.createElement('textarea');
-  const commentSubmit = document.createElement('button');
-
-  bottomPart.classList = 'popup-bottom';
-
-  userName.type = 'text';
-  userName.classList = 'userName';
-  userName.id = 'name-id';
-  userName.name = 'user-name';
-  userName.placeholder = 'Type Your Name';
-  userName.required = true;
-
-  userComment.classList = 'userComment';
-  userComment.id = 'comment-id';
-  userComment.name = 'comment-name';
-  userComment.placeholder = 'Comment here ...';
-  userComment.rows = '10';
-  userComment.cols = '50';
-  userComment.required = true;
-
-  commentSubmit.type = 'submit';
-  commentSubmit.innerText = 'Submit';
-  commentSubmit.classList = 'comm-sub';
-
-  topPart.appendChild(mealName);
-  topPart.appendChild(mealImage);
-  topPart.appendChild(ingredients);
-  bottomPart.appendChild(userName);
-  bottomPart.appendChild(userComment);
-  bottomPart.appendChild(commentSubmit);
-  commentSection.appendChild(topPart);
-  commentSection.appendChild(bottomPart);
+  commentSection.innerHTML = `<div class="popup-bottom">
+        <h3> Meal name<h3>
+        <img src="#" alt="Meal Image" class="meal-img">
+        <img src="#" alt="heart-icon">likes</img>
+        <p class="ingredients"> Ingredients </p>
+    </div>
+    
+    <form class="popup-bottom">
+    <input type="text" class="userName" id="name-id" name="user-name" placeholder="Type Your Name" required>
+    <textarea class="userComment" id="comment-id" name="comment-name" placeholder="Comment here ..." rows="10" cols="50" required></textarea>
+    <button type="submit" class="comm-sub">Submit</button>
+    </form>`;
 };
 
 export default display();

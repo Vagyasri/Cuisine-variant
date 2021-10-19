@@ -3,4 +3,4 @@ import display from './comment.js';
 
 const popUp = document.querySelector('.pop');
 
-popUp.addEventListener('click', display);
+popUp.addEventListener('submit', display);

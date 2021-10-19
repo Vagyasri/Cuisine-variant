@@ -23,7 +23,13 @@ body {
   color: black;
 }
 
-.popup-bottom {
+.meal-img {
+  height: 100px;
+  width: 100px;
+}
+
+.popup-bottom,
+.popup-top {
   display: flex;
   flex-direction: column;
   margin: 10px 500px;
@@ -36,6 +42,7 @@ body {
 
 .userComment {
   margin: 15px 0;
+  padding: 5px;
 }
 
 .comm-sub {
