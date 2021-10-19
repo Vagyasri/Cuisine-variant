@@ -1,5 +1,5 @@
 {
-  "name": "webpack-setup",
+  "name": "cusine-variant",
   "version": "1.0.0",
   "description": "Setting up the Web-pack for the future Projects",
   "private": true,
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Vagyasri/Webpack-Setup.git"
+    "url": "git+https://github.com/Vagyasri/Cusine-variant.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Vagyasri/Webpack-Setup/issues"
+    "url": "https://github.com/Vagyasri/Cusine-variant/issues"
   },
-  "homepage": "https://github.com/Vagyasri/Webpack-Setup#readme",
+  "homepage": "https://github.com/Vagyasri/Cusine-variant#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.3.0",
