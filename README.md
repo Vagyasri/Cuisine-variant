@@ -9,6 +9,8 @@
 - JavaScipt
 - Webpack
 - ES6
+- API
+- JSON
 
 ## Author 1
 
