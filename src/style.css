@@ -2,9 +2,16 @@ body {
   margin: 0;
 }
 
+header {
+  background: #6cf;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+
 .header-container {
   display: flex;
-  background: #6cf;
 }
 
 .header-list {
