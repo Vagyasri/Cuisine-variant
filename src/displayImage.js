@@ -1,13 +1,13 @@
 // eslint-disable-next-line import/no-cycle
 import accessComment from './accessButton.js';
 
-const foodApi = 'https://themealdb.com/api/json/v1/1/filter.php?c=Seafood';
+const foodApi = 'https://themealdb.com/api/json/v1/1/categories.php';
 const mealList = document.querySelector('.meal-list');
 
 const getMeals = async () => {
   const response = await fetch(`${foodApi}`);
   const data = await response.json();
-  const meal = data.meals.slice(0, 9);
+  const meal = data.categories.slice(0, 9);
   return meal;
 };
 const loadData = async () => {
@@ -16,9 +16,9 @@ const loadData = async () => {
   displayData.forEach((element) => {
     const check = element.completed ? 'checked' : '';
     display += `   
-    <li id=${element.idMeal}>
-    <img src=${element.strMealThumb} alt="Food">
-    <h4>${element.strMeal}</h4>
+    <li id=${element.idCategory}>
+    <img src=${element.strCategoryThumb} alt="Food">
+    <h4>${element.strCategory}</h4>
     <i class="far fa-heart like">${check}</i>
     <button type="submit" class="pop">Comments</button>
     </li>`;
