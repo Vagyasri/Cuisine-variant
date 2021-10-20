@@ -2,13 +2,11 @@ import './style.css';
 
 const foodApi = 'https://themealdb.com/api/json/v1/1/filter.php?c=Seafood';
 const mealList = document.querySelector('.meal-list');
-const checkBoxes = document.querySelectorAll('.like');
 
 const getMeals = async () => {
   const response = await fetch(`${foodApi}`);
   const data = await response.json();
   const meal = data.meals.slice(0, 9);
-  console.log(meal, 'Hello World', meal.length);
   return meal;
 };
 const loadData = async () => {
@@ -27,20 +25,3 @@ const loadData = async () => {
   });
 };
 window.addEventListener('DOMContentLoaded', loadData);
-
-function displayBox() {
-  for (let i = 0; i < checkBoxes.length; i += 1) {
-    checkBoxes[i].addEventListener('change', (e) => {
-      const taskIndex = Number(e.target.getAttribute('class'));
-      let todos = JSON.parse(localStorage.getItem('todos')) || [];
-      const taskUpdate = todos.find((task) => task.index === taskIndex);
-      taskUpdate.completed = !taskUpdate.completed;
-      todos = todos.filter((task) => task.index !== taskIndex);
-      todos.push(taskUpdate);
-      localStorage.setItem('todos', JSON.stringify(todos));
-      loadData();
-    });
-  }
-}
-
-checkBoxes.addEventListener('click', displayBox());
