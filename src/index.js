@@ -2,6 +2,7 @@ import './style.css';
 
 const foodApi = 'https://themealdb.com/api/json/v1/1/filter.php?c=Seafood';
 const mealList = document.querySelector('.meal-list');
+const checkBoxes = document.querySelectorAll('.like');
 
 const getMeals = async () => {
   const response = await fetch(`${foodApi}`);
@@ -14,13 +15,32 @@ const loadData = async () => {
   const displayData = await getMeals();
   let display = '';
   displayData.forEach((element) => {
+    const check = element.completed ? 'checked' : '';
     display += `   
     <li id=${element.idMeal}>
     <img src=${element.strMealThumb} alt="Food">
-    <h4>${element.strMeal}<i class="far fa-heart"></i></h4>
+    <h4>${element.strMeal}</h4>
+    <i class="far fa-heart like">${check}</i>
     <button type="submit">Comments</button>
     </li>`;
     mealList.innerHTML = display;
   });
 };
 window.addEventListener('DOMContentLoaded', loadData);
+
+function displayBox() {
+  for (let i = 0; i < checkBoxes.length; i += 1) {
+    checkBoxes[i].addEventListener('change', (e) => {
+      const taskIndex = Number(e.target.getAttribute('class'));
+      let todos = JSON.parse(localStorage.getItem('todos')) || [];
+      const taskUpdate = todos.find((task) => task.index === taskIndex);
+      taskUpdate.completed = !taskUpdate.completed;
+      todos = todos.filter((task) => task.index !== taskIndex);
+      todos.push(taskUpdate);
+      localStorage.setItem('todos', JSON.stringify(todos));
+      loadData();
+    });
+  }
+}
+
+checkBoxes.addEventListener('click', displayBox());

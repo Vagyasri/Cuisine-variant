@@ -4,6 +4,10 @@ body {
 
 header {
   background: #6cf;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
 }
 
 .header-container {
@@ -27,8 +31,8 @@ header {
 }
 
 footer {
-  /* position: fixed;
-  bottom: 0; */
+  position: fixed;
+  bottom: 0;
   margin: 0;
   width: 100%;
   height: 60px;
