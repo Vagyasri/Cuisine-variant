@@ -13,6 +13,10 @@ In this project, we are creating a website consisting of Recipes from around the
 - API
 - JSON
 
+## Live Demo
+
+[Checkout the Live View!!](https://vagyasri.github.io/Cuisine-variant/dist/)
+
 ## Author 1
 
 👤 **Stephanie Uchechi**
