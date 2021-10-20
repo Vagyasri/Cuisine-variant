@@ -2,7 +2,7 @@ import getData from './create.js';
 
 const commentSection = document.querySelector('.comment-popup');
 
-const display = async () => {
+const displayPop = async () => {
   getData().then((getMeal) => {
     commentSection.innerHTML = `<div class="popup-top">
     <div class="meal-data">
@@ -27,4 +27,4 @@ const display = async () => {
   });
 };
 
-export default display;
+export default displayPop;

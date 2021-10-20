@@ -9,5 +9,3 @@ const getData = async () => {
 };
 
 export default getData;
-
-// const mealData = entireObject.meals[0];
