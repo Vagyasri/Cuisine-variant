@@ -4,13 +4,10 @@ const mealUrl = `${baseUrl}${mealId}`;
 
 const getData = async () => {
   const response = await fetch(mealUrl);
-  const meals = await response.json();
-  return meals;
+  const mealData = await response.json();
+  return mealData;
 };
 
-export { getData, mealUrl };
+export default getData;
 
-// (async () => {
-//     const initialScores = await getData();
-//     display(initialScores.result);
-//   })();
+// const mealData = entireObject.meals[0];
