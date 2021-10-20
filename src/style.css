@@ -56,9 +56,22 @@ body {
   align-self: flex-end;
 }
 
-.com-count,
 .meal-data {
   text-align: center;
+}
+
+.com-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.like-count {
+  font-size: large;
+}
+
+.instructions {
+  font-size: larger;
 }
 
 footer {

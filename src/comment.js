@@ -8,10 +8,10 @@ const display = () => {
         </div>
 
         <div class="com-count">
-        <img src="https://c.tenor.com/CePpbsVdFRMAAAAC/love-beating.gif" alt="heart-icon" class="heart-icon"> <span>likes count</span>
+        <img src="https://c.tenor.com/CePpbsVdFRMAAAAC/love-beating.gif" alt="heart-icon" class="heart-icon"> <span class="like-count">likes count</span>
         </div>
 
-        <p class="instructions"> <b>Instructions:</b><br>Crush the meat so that it is finite and we put it on a griddle to brown.
+        <p class="instructions"> <b>Instructions:</b><br><br>Crush the meat so that it is finite and we put it on a griddle to brown.
         Put the eggs, bacon and ham to fry.
         Cut the bread in half, put the beef brisket, the fried eggs, the bacon, the ham, the mozzarella, the tomato and the lettuce.
         Cover with the other half of the bread and serve. </p>
