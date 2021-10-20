@@ -2,9 +2,12 @@ body {
   margin: 0;
 }
 
+header {
+  background: #6cf;
+}
+
 .header-container {
   display: flex;
-  background: #6cf;
 }
 
 .header-list {
@@ -24,8 +27,8 @@ body {
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
+  /* position: fixed;
+  bottom: 0; */
   margin: 0;
   width: 100%;
   height: 60px;
