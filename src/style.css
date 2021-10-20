@@ -84,13 +84,11 @@ footer {
   text-align: center;
 }
 
-button {
-  cursor: pointer;
-}
-
 .heart-icon {
   height: 30px;
   width: 50px;
+}
+
 .meal-list {
   display: grid;
   margin-left: 50%;
@@ -122,4 +120,5 @@ button {
   font-size: 16px;
   margin-left: 50%;
   transform: translateX(-50%);
+  cursor: pointer;
 }
