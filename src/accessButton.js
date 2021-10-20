@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-cycle
 import displayPop from './comment.js';
 
 const accessComment = () => {

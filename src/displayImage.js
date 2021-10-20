@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-cycle
 import accessComment from './accessButton.js';
 
 const foodApi = 'https://themealdb.com/api/json/v1/1/filter.php?c=Seafood';
@@ -26,4 +27,4 @@ const loadData = async () => {
   });
 };
 
-export default loadData;
+export { loadData, getMeals };

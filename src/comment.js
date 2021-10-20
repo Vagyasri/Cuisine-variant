@@ -1,9 +1,11 @@
-import getData from './create.js';
+// eslint-disable-next-line import/no-cycle
+import { getMeals } from './displayImage.js';
 
 const commentSection = document.querySelector('.comment-popup');
 
 const displayPop = async () => {
-  getData().then((getMeal) => {
+  console.log('getMeals');
+  getMeals().then((getMeal) => {
     commentSection.innerHTML = `<div class="popup-top">
     <div class="meal-data">
     <h3> ${getMeal.meals[0].strMeal} <h3>
