@@ -30,6 +30,57 @@ header {
   color: black;
 }
 
+.meal-img {
+  height: 400px;
+  width: 400px;
+}
+
+.popup-top {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 300px;
+}
+
+.popup-bottom {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 500px;
+  padding: 30px 0;
+}
+
+.userName {
+  padding: 5px;
+  align-self: center;
+}
+
+.userComment {
+  margin: 15px 0;
+  padding: 5px;
+}
+
+.comm-sub {
+  padding: 5px;
+  align-self: flex-end;
+}
+
+.meal-data {
+  text-align: center;
+}
+
+.com-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.like-count {
+  font-size: large;
+}
+
+.instructions {
+  font-size: larger;
+}
+
 footer {
   position: fixed;
   bottom: 0;
@@ -38,6 +89,11 @@ footer {
   height: 60px;
   background: #6cf;
   text-align: center;
+}
+
+.heart-icon {
+  height: 30px;
+  width: 50px;
 }
 
 .meal-list {
@@ -71,4 +127,5 @@ button {
   font-size: 16px;
   margin-left: 50%;
   transform: translateX(-50%);
+  cursor: pointer;
 }

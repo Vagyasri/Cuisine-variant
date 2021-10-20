@@ -1,4 +1,5 @@
 import './style.css';
+import display from './comment.js';
 
 const foodApi = 'https://themealdb.com/api/json/v1/1/filter.php?c=Seafood';
 const mealList = document.querySelector('.meal-list');
@@ -28,19 +29,9 @@ const loadData = async () => {
 };
 window.addEventListener('DOMContentLoaded', loadData);
 
-function displayBox() {
-  for (let i = 0; i < checkBoxes.length; i += 1) {
-    checkBoxes[i].addEventListener('change', (e) => {
-      const taskIndex = Number(e.target.getAttribute('class'));
-      let todos = JSON.parse(localStorage.getItem('todos')) || [];
-      const taskUpdate = todos.find((task) => task.index === taskIndex);
-      taskUpdate.completed = !taskUpdate.completed;
-      todos = todos.filter((task) => task.index !== taskIndex);
-      todos.push(taskUpdate);
-      localStorage.setItem('todos', JSON.stringify(todos));
-      loadData();
-    });
-  }
-}
-
 checkBoxes.addEventListener('click', displayBox());
+
+const popUp = document.querySelector('.pop');
+
+popUp.addEventListener('click', display);
+
