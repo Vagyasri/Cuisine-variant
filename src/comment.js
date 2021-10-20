@@ -3,9 +3,12 @@ const commentSection = document.querySelector('.comment-popup');
 const display = () => {
   commentSection.innerHTML = `<div class="popup-bottom">
         <h3> Meal name<h3>
-        <img src="#" alt="Meal Image" class="meal-img">
-        <img src="#" alt="heart-icon">likes</img>
-        <p class="ingredients"> Ingredients </p>
+        <img src="https://www.themealdb.com/images/media/meals/n7qnkb1630444129.jpg" alt="Meal Image" class="meal-img">
+        <img src="https://c.tenor.com/CePpbsVdFRMAAAAC/love-beating.gif" alt="heart-icon">likes count</img>
+        <p class="instructions"> <b>Instructions<b><br>Crush the meat so that it is finite and we put it on a griddle to brown.
+        Put the eggs, bacon and ham to fry.
+        Cut the bread in half, put the beef brisket, the fried eggs, the bacon, the ham, the mozzarella, the tomato and the lettuce.
+        Cover with the other half of the bread and serve. </p>
     </div>
     
     <form class="popup-bottom">
