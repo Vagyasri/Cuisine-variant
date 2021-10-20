@@ -3,6 +3,7 @@ body {
 }
 
 header {
+  position: fixed;
   background: #6cf;
   top: 0;
   width: 100%;
@@ -127,4 +128,9 @@ button {
   margin-left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
+}
+
+.main-container {
+  padding-top: 30px;
+  padding-bottom: 60px;
 }
