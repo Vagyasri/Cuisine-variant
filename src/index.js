@@ -1,4 +1,5 @@
 import './style.css';
+import display from './comment.js';
 
 const foodApi = 'https://themealdb.com/api/json/v1/1/filter.php?c=Seafood';
 const mealList = document.querySelector('.meal-list');
@@ -25,3 +26,7 @@ const loadData = async () => {
   });
 };
 window.addEventListener('DOMContentLoaded', loadData);
+
+const popUp = document.querySelector('.pop');
+
+popUp.addEventListener('click', display);
