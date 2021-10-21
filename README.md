@@ -33,7 +33,7 @@ In this project, we are creating a website consisting of Recipes from around the
 
 ## Getting Started
 
-### Prerequisites:
+### Prerequisites
 
 - Web browser
 - Code Editor (VS Code)
