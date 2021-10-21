@@ -15,8 +15,6 @@ const loadData = async () => {
   const displayData = await getMeals();
   let display = '';
   displayData.forEach((element) => {
-    // console.log(element);
-
     const check = element.completed ? 'checked' : '';
     display += `   
     <li id="${element.idCategory}">

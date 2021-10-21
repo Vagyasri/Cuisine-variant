@@ -5,7 +5,6 @@ const commentSection = document.querySelector('.comment-popup');
 
 const displayPop = async (index) => {
   const meals = await getMeals();
-  // console.log(meals);
   commentSection.innerHTML = `<div class="popup-top">
     <div class="meal-data">
     <h3> ${meals[index - 2].strCategory} <h3>
