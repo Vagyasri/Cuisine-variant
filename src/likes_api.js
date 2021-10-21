@@ -28,7 +28,6 @@ const allHearts = async () => {
   allLikes.forEach((like) => {
     like.addEventListener('click', async (e) => {
       const id = e.target.getAttribute('data-id');
-      console.log(id);
       await likeId(id);
       const allLikesArray = await getLikes();
       const getNewLikes = allLikesArray.find((element) => element.item_id === id).likes;
