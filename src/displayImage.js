@@ -8,7 +8,7 @@ const mealList = document.querySelector('.meal-list');
 const getMeals = async () => {
   const response = await fetch(`${foodApi}`);
   const data = await response.json();
-  const meal = data.categories.slice(1, 10);
+  const meal = data.categories;
   return meal;
 };
 
@@ -22,6 +22,7 @@ const loadData = async () => {
     <img src="${element.strCategoryThumb}" alt="Food">
     <h4>${element.strCategory}</h4>
     <i class="far fa-heart like">${check}</i>
+    <span class="likes-count"></span>
     <button type="submit" class="pop" id="${element.idCategory}">Comments</button>
     </li>`;
   });

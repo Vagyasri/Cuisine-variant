@@ -23,20 +23,16 @@ const getLikes = async () => {
   return res.json();
 };
 
-const spanCount = document.querySelector('.likes-count');
-console.log(spanCount);
-
 const allHearts = async () => {
   const allLikes = document.querySelectorAll('.like');
   allLikes.forEach((like) => {
     like.addEventListener('click', async (e) => {
       const id = e.target.getAttribute('data-id');
-      const likeObject = await likeId(id);
-      // console.log(likeObject);
+      await likeId(id);
       const allLikesArray = await getLikes();
       const getNewLikes = allLikesArray.find((element) => element.item_id === id).likes;
-      // count.innerText = `${getNewLikes}`;
-      console.log(getNewLikes);
+      const spanCount = document.querySelector('.likes-count');
+      spanCount.innerText = `${getNewLikes} Likes`;
     });
   });
 };
