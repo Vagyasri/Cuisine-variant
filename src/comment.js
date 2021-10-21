@@ -7,15 +7,15 @@ const displayPop = async (index) => {
   const meals = await getMeals();
   commentSection.innerHTML = `<div class="popup-top">
     <div class="meal-data">
-    <h3> ${meals[index - 2].strCategory} <h3>
-    <img src="${meals[index - 2].strCategoryThumb}" alt="s Image" class="meal-img">
+    <h3> ${meals[index - 1].strCategory} <h3>
+    <img src="${meals[index - 1].strCategoryThumb}" alt="s Image" class="meal-img">
     </div>
 
     <div class="com-count">
     <img src="https://c.tenor.com/CePpbsVdFRMAAAAC/love-beating.gif" alt="heart-icon" class="heart-icon"> <span class="like-count">likes count</span>
     </div>
 
-    <p class="description"> <b>Description:</b><br><br>${meals[index - 2].strCategoryDescription} </p>
+    <p class="description"> <b>Description:</b><br><br>${meals[index - 1].strCategoryDescription} </p>
 </div>
 
 <form class="popup-bottom">

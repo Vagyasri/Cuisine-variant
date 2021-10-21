@@ -134,3 +134,8 @@ button {
   padding-top: 30px;
   padding-bottom: 60px;
 }
+
+.like {
+  cursor: pointer;
+  color: red;
+}

@@ -1,5 +1,5 @@
 const involvementApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
-const apiId = 'mzNfNflh4BGiNqUNLXME/likes';
+const apiId = 'PPe1jteASeyGFemQLBaU/likes';
 
 const likeId = async (id) => {
   const response = await fetch(`${involvementApi}${apiId}`,
@@ -28,13 +28,21 @@ const allHearts = async () => {
   allLikes.forEach((like) => {
     like.addEventListener('click', async (e) => {
       const id = e.target.getAttribute('data-id');
-      const likeObject = await likeId(id);
-      // console.log(likeObject);
+      console.log(id);
+      await likeId(id);
       const allLikesArray = await getLikes();
       const getNewLikes = allLikesArray.find((element) => element.item_id === id).likes;
-      console.log(getNewLikes);
+      // const spanCount = document.querySelectorAll('.likes-count');
+      like.parentElement.querySelector(`#like${id}`).textContent = `${getNewLikes} Likes`;
     });
   });
 };
 
-export default allHearts;
+const likesDisplay = async () => {
+  const allLikesArray = await getLikes();
+  allLikesArray.forEach((obj) => {
+    document.querySelector(`#like${obj.item_id}`).textContent = `${obj.likes} Likes`;
+  });
+};
+
+export { allHearts, likesDisplay };
