@@ -3,20 +3,20 @@ import { getMeals } from './displayImage.js';
 
 const commentSection = document.querySelector('.comment-popup');
 
-const displayPop = async () => {
-  getMeals().then((getMeal) => {
-    console.log(getMeal);
-    commentSection.innerHTML = `<div class="popup-top">
+const displayPop = async (index) => {
+  const meals = await getMeals();
+  // console.log(meals);
+  commentSection.innerHTML = `<div class="popup-top">
     <div class="meal-data">
-    <h3> ${getMeal[0].strCategory} <h3>
-    <img src="${getMeal[0].strCategoryThumb}" alt="Meal Image" class="meal-img">
+    <h3> ${meals[index - 2].strCategory} <h3>
+    <img src="${meals[index - 2].strCategoryThumb}" alt="s Image" class="meal-img">
     </div>
 
     <div class="com-count">
     <img src="https://c.tenor.com/CePpbsVdFRMAAAAC/love-beating.gif" alt="heart-icon" class="heart-icon"> <span class="like-count">likes count</span>
     </div>
 
-    <p class="description"> <b>Description:</b><br><br>${getMeal[0].strCategoryDescription} </p>
+    <p class="description"> <b>Description:</b><br><br>${meals[index - 2].strCategoryDescription} </p>
 </div>
 
 <form class="popup-bottom">
@@ -26,7 +26,6 @@ const displayPop = async () => {
 </form>
 <ul class="comment-list"> </ul>
 <p class="com-count">comment counts</p>`;
-  });
 };
 
 export default displayPop;

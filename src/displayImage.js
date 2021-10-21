@@ -7,24 +7,27 @@ const mealList = document.querySelector('.meal-list');
 const getMeals = async () => {
   const response = await fetch(`${foodApi}`);
   const data = await response.json();
-  const meal = data.categories.slice(0, 9);
+  const meal = data.categories.slice(1, 10);
   return meal;
 };
+
 const loadData = async () => {
   const displayData = await getMeals();
   let display = '';
   displayData.forEach((element) => {
+    // console.log(element);
+
     const check = element.completed ? 'checked' : '';
     display += `   
-    <li id=${element.idCategory}>
-    <img src=${element.strCategoryThumb} alt="Food">
+    <li id="${element.idCategory}">
+    <img src="${element.strCategoryThumb}" alt="Food">
     <h4>${element.strCategory}</h4>
     <i class="far fa-heart like">${check}</i>
-    <button type="submit" class="pop">Comments</button>
+    <button type="submit" class="pop" id="${element.idCategory}">Comments</button>
     </li>`;
-    mealList.innerHTML = display;
-    accessComment();
   });
+  mealList.innerHTML = display;
+  accessComment();
 };
 
 export { loadData, getMeals };

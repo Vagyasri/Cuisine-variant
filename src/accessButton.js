@@ -2,8 +2,13 @@
 import displayPop from './comment.js';
 
 const accessComment = () => {
-  const popUp = document.querySelector('.pop');
-  popUp.addEventListener('click', displayPop);
+  const popUps = [...document.querySelectorAll('.pop')];
+  popUps.forEach((popUp) => {
+    popUp.addEventListener('click', () => {
+      const { id } = popUp;
+      displayPop(id);
+    });
+  });
 };
 
 export default accessComment;
