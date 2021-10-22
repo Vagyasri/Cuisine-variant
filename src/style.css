@@ -108,22 +108,20 @@ header {
   border-radius: 5px;
 }
 
+.comm-sub {
+  background-color: #fff;
+  box-shadow: 3px 2px;
+  font-weight: 600;
+  font-size: 25px;
+  width: 170px;
+}
+
 .userComment {
   margin: 15px 0;
 }
 
 .meal-data {
   text-align: center;
-}
-
-.com-count {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.like-count {
-  font-size: large;
 }
 
 .description {

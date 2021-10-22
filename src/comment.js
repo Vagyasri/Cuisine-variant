@@ -15,7 +15,7 @@ const displayPop = async (index) => {
 
     <p class="description"> ${meals[index - 1].strCategoryDescription} </p>
 
-    <div class="user-comments">
+    <div class="new-comments">
     <h3> Comments (count) </h3>
     <span class="comments-count"></span>
     <ul class="comment-list"> </ul>
