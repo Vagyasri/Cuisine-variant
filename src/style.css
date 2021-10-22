@@ -104,6 +104,7 @@ footer {
   align-content: space-around;
   grid-template-columns: auto auto auto;
   grid-column-gap: 6rem;
+  grid-row-gap: 4rem;
   padding-left: 0;
 }
 
@@ -128,6 +129,7 @@ button {
   margin-left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
+  margin-top: 2rem;
 }
 
 .main-container {
@@ -138,4 +140,13 @@ button {
 .like {
   cursor: pointer;
   color: red;
+}
+
+.item-list {
+  position: relative;
+  top: 6rem;
+}
+
+.item-list h3 {
+  text-align: center;
 }

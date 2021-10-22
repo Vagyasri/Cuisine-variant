@@ -14,7 +14,6 @@ const likeId = async (id) => {
       },
     });
   const returnObject = await response.json;
-  // console.log(returnObject);
   return returnObject;
 };
 
@@ -30,8 +29,8 @@ const allHearts = async () => {
       const id = e.target.getAttribute('data-id');
       await likeId(id);
       const allLikesArray = await getLikes();
+      localStorage.setItem('likes', JSON.stringify(allLikesArray));
       const getNewLikes = allLikesArray.find((element) => element.item_id === id).likes;
-      // const spanCount = document.querySelectorAll('.likes-count');
       like.parentElement.querySelector(`#like${id}`).textContent = `${getNewLikes} Likes`;
     });
   });
