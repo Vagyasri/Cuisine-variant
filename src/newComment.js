@@ -10,8 +10,6 @@ const getComments = async () => {
 };
 
 const addComment = async (date, name, comment) => {
-//   const name = document.querySelector('.userName');
-//   const comment = document.querySelector('.userComment');
   fetch(commentUrl, {
     method: 'POST',
     mode: 'cors',
@@ -34,18 +32,26 @@ const addComment = async (date, name, comment) => {
     });
 };
 
-const displayComment = (data) => {
+const linkComment = () => {
+
+};
+
+const displayComment = () => {
   const form = document.forms['form-dom'];
+  const name = document.querySelector('.userName');
+  const comment = document.querySelector('.userComment');
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     // const formData = new FormData(this);
     const commentList = document.querySelector('.comment-list');
     const listContent = document.createElement('li');
     listContent.classList = 'list-content';
-    listContent.innerText = `${data.creation_date} ${data.username} : ${data.comment}`;
+    listContent.innerText = `${name.value} : ${comment.value}`;
+    name.value = '';
+    comment.value = '';
     commentList.appendChild(listContent);
     // addComment();
   });
 };
 
-export { addComment, displayComment };
+export { addComment, displayComment, linkComment };

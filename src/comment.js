@@ -1,6 +1,6 @@
 // eslint-disable-next-line import/no-cycle
 import { getMeals } from './displayImage.js';
-import { addComment, displayComment } from './newComment.js';
+import { addComment, displayComment, linkComment } from './newComment.js';
 
 const commentSection = document.querySelector('.comment-popup');
 
@@ -36,6 +36,7 @@ const displayPop = async (index) => {
     popupWrapper.classList.remove('show');
   });
   addComment();
+  linkComment();
   displayComment();
 };
 
