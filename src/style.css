@@ -1,5 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.popup-wrapper {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.popup-wrapper.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.comment-popup {
+  background-color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 600px;
+  height: 300px;
+  max-width: 100%;
+  padding-top: 565px;
+  overflow-y: scroll;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.popup-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.popup-bottom {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 30px 0;
+}
+
+.close {
+  align-self: flex-end;
+  border-radius: 5px;
 }
 
 header {
@@ -31,21 +96,8 @@ header {
 }
 
 .meal-img {
-  height: 400px;
+  height: 300px;
   width: 400px;
-}
-
-.popup-top {
-  display: flex;
-  flex-direction: column;
-  margin: 10px 300px;
-}
-
-.popup-bottom {
-  display: flex;
-  flex-direction: column;
-  margin: 20px 500px;
-  padding: 30px 0;
 }
 
 .userName {
@@ -98,9 +150,11 @@ footer {
 
 .meal-list {
   display: grid;
-  margin-left: 50%;
+
+  /* margin-left: 50%; */
   margin-top: 5rem;
-  transform: translateX(-50%);
+
+  /* transform: translateX(-50%); */
   align-content: space-around;
   grid-template-columns: auto auto auto;
   grid-column-gap: 6rem;

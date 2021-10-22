@@ -5,7 +5,9 @@ const commentSection = document.querySelector('.comment-popup');
 
 const displayPop = async (index) => {
   const meals = await getMeals();
-  commentSection.innerHTML = `<div class="popup-top">
+  commentSection.innerHTML = `
+  <div class="popup-top">
+  <button class="close"> Close </button>
     <div class="meal-data">
     <h3> ${meals[index - 1].strCategory} <h3>
     <img src="${meals[index - 1].strCategoryThumb}" alt="s Image" class="meal-img">
@@ -25,6 +27,12 @@ const displayPop = async (index) => {
 </form>
 <ul class="comment-list"> </ul>
 <p class="com-count">comment counts</p>`;
+
+  const popupWrapper = document.querySelector('.popup-wrapper');
+  const close = document.querySelector('.close');
+  close.addEventListener('click', () => {
+    popupWrapper.classList.remove('show');
+  });
 };
 
 export default displayPop;
