@@ -1,7 +1,7 @@
 const commentId = 'KrIM1SfJgCtztyQoatez';
 const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
 
-const commentUrl = `${baseUrl}${commentId}/comments/`;
+const commentUrl = `${baseUrl}${commentId}/comments`;
 
 const getComments = async () => {
   const response = await fetch(commentUrl);
@@ -9,9 +9,9 @@ const getComments = async () => {
   return data;
 };
 
-const addComment = () => {
-  const name = document.querySelector('.userName');
-  const comment = document.querySelector('.userComment');
+const addComment = async (date, name, comment) => {
+//   const name = document.querySelector('.userName');
+//   const comment = document.querySelector('.userComment');
   fetch(commentUrl, {
     method: 'POST',
     mode: 'cors',
@@ -19,7 +19,7 @@ const addComment = () => {
       'Content-type': 'application/json',
     },
     body: JSON.stringify({
-      creation_date: Date.now(),
+      creation_date: date.value,
       username: name.value,
       comment: comment.value,
     }),
@@ -38,13 +38,14 @@ const displayComment = (data) => {
   const form = document.forms['form-dom'];
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    addComment();
+    // const formData = new FormData(this);
+    const commentList = document.querySelector('.comment-list');
+    const listContent = document.createElement('li');
+    listContent.classList = 'list-content';
+    listContent.innerText = `${data.creation_date} ${data.username} : ${data.comment}`;
+    commentList.appendChild(listContent);
+    // addComment();
   });
-  const commentList = document.querySelector('.comment-list');
-  const listContent = document.createElement('li');
-  listContent.classList = 'list-content';
-  listContent.innerText = `${data.creation_date} ${data.username} : ${data.comment}`;
-  commentList.appendChild(listContent);
 };
 
 export { addComment, displayComment };
