@@ -15,8 +15,10 @@ const displayPop = async (index) => {
 
     <p class="description"> ${meals[index - 1].strCategoryDescription} </p>
 
-    <div class="com-count">
-    <img src="https://c.tenor.com/CePpbsVdFRMAAAAC/love-beating.gif" alt="heart-icon" class="heart-icon"> <span class="like-count">likes count</span>
+    <div class="user-comments">
+    <h3> Comments (count) </h3>
+    <span class="comments-count"></span>
+    <ul class="comment-list"> </ul>
     </div>
 </div>
 
@@ -25,9 +27,7 @@ const displayPop = async (index) => {
 <input type="text" class="userName" id="name-id" name="user-name" placeholder="Type Your Name" required>
 <textarea class="userComment" id="comment-id" name="comment-name" placeholder="Comment here ..." rows="10" cols="50" required></textarea>
 <button type="submit" class="comm-sub">Submit</button>
-</form>
-<ul class="comment-list"> </ul>
-<p class="com-count">comment counts</p>`;
+</form>`;
 
   const popupWrapper = document.querySelector('.popup-wrapper');
   const close = document.querySelector('.close');
