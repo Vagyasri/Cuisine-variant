@@ -7,7 +7,7 @@ const displayPop = async (index) => {
   const meals = await getMeals();
   commentSection.innerHTML = `
   <div class="popup-top">
-  <button class="close"> Close </button>
+  <button class="close"> <i class="fas fa-times"></i> </button>
     <div class="meal-data">
     <img src="${meals[index - 1].strCategoryThumb}" alt="s Image" class="meal-img">
     <h3> ${meals[index - 1].strCategory} <h3>
@@ -22,12 +22,12 @@ const displayPop = async (index) => {
     </div>
 </div>
 
-<form class="popup-bottom">
-<h3> Add your comment</h3>
-<input type="text" class="userName" id="name-id" name="user-name" placeholder="Type Your Name" required>
-<textarea class="userComment" id="comment-id" name="comment-name" placeholder="Comment here ..." rows="10" cols="50" required></textarea>
-<button type="submit" class="comm-sub">Submit</button>
-</form>`;
+  <form class="popup-bottom">
+  <h3> Add your comment</h3>
+  <input type="text" class="userName" id="name-id" name="user-name" placeholder="Type Your Name" required>
+  <textarea class="userComment" id="comment-id" name="comment-name" placeholder="Comment here ..." rows="10" cols="50" required></textarea>
+  <button type="submit" class="comm-sub">Submit</button>
+  </form>`;
 
   const popupWrapper = document.querySelector('.popup-wrapper');
   const close = document.querySelector('.close');
