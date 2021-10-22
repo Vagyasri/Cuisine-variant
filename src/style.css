@@ -23,6 +23,7 @@ body {
   overflow-y: scroll;
   pointer-events: none;
   opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 .popup-wrapper.show {
@@ -34,13 +35,11 @@ body {
   background-color: white;
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 600px;
-  height: 300px;
+  height: 500px;
   max-width: 100%;
-  padding-top: 565px;
   overflow-y: scroll;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -100,19 +99,17 @@ header {
   width: 400px;
 }
 
-.userName {
+.userName,
+.comm-sub,
+.userComment {
   padding: 5px;
-  align-self: center;
+  align-self: flex-start;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
 .userComment {
   margin: 15px 0;
-  padding: 5px;
-}
-
-.comm-sub {
-  padding: 5px;
-  align-self: flex-end;
 }
 
 .meal-data {
@@ -173,7 +170,7 @@ footer {
   margin-bottom: 7rem;
 }
 
-button {
+.pop {
   border: 2px solid black;
   background-color: #fff;
   box-shadow: 3px 2px;
@@ -181,6 +178,9 @@ button {
   font-size: 16px;
   margin-left: 50%;
   transform: translateX(-50%);
+}
+
+button {
   cursor: pointer;
 }
 
