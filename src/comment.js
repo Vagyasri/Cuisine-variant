@@ -1,6 +1,6 @@
 // eslint-disable-next-line import/no-cycle
 import { getMeals } from './displayImage.js';
-import { addComment, displayComment, linkComment } from './newComment.js';
+import displayComment from './newComment.js';
 
 const commentSection = document.querySelector('.comment-popup');
 
@@ -25,7 +25,7 @@ const displayPop = async (index) => {
 
   <form class="popup-bottom" name="form-dom">
   <h3> Add your comment</h3>
-  <input type="text" class="userName" id="name-id" name="user-name" placeholder="Type Your Name" required>
+  <input type="text" class="userName" id="${meals[index - 1].idCategory}" name="user-name" placeholder="Type Your Name" required>
   <textarea class="userComment" id="comment-id" name="comment-name" placeholder="Comment here ..." rows="10" cols="50" required></textarea>
   <button type="submit" class="comm-sub">Submit</button>
   </form>`;
@@ -35,8 +35,6 @@ const displayPop = async (index) => {
   close.addEventListener('click', () => {
     popupWrapper.classList.remove('show');
   });
-  addComment();
-  linkComment();
   displayComment();
 };
 
