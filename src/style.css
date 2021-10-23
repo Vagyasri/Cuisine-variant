@@ -197,6 +197,9 @@ button {
 .list-content {
   list-style-type: none;
   text-align: left;
+  font-size: larger;
+  padding: 5px 0;
+}
 
 .item-list {
   position: relative;

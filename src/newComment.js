@@ -21,6 +21,13 @@ const displayComment = () => {
         'Content-type': 'application/json',
       },
     }).then((response) => response.text()).then((data) => data);
+    const commentList = document.querySelector('.comment-list');
+    const listContent = document.createElement('li');
+    listContent.classList = 'list-content';
+    listContent.innerText = `${Date.value} ${name.value} ${comment.value}`;
+    name.value = '';
+    comment.value = '';
+    commentList.appendChild(listContent);
   });
 };
 
@@ -34,13 +41,13 @@ const commentAccess = async (id) => {
     const commentList = document.querySelector('.comment-list');
     const listContent = document.createElement('li');
     listContent.classList = 'list-content';
-    listContent.innerText = `${result.username} ${result.comment}`;
+    listContent.innerText = `${result.creation_date} ${result.username}: ${result.comment}`;
     result.username = '';
     result.comment = '';
     commentList.appendChild(listContent);
   });
 
-  // console.log(finalResult.length);
+  // console.log(finalResult);
 };
 
 export { displayComment, commentAccess };
