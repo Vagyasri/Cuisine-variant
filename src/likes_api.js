@@ -14,7 +14,6 @@ const likeId = async (id) => {
       },
     });
   const returnObject = await response.json;
-  // console.log(returnObject);
   return returnObject;
 };
 
@@ -25,13 +24,14 @@ const getLikes = async () => {
 
 const allHearts = async () => {
   const allLikes = document.querySelectorAll('.like');
+  console.log(allLikes);
   allLikes.forEach((like) => {
     like.addEventListener('click', async (e) => {
       const id = e.target.getAttribute('data-id');
       await likeId(id);
       const allLikesArray = await getLikes();
+      localStorage.setItem('likes', JSON.stringify(allLikesArray));
       const getNewLikes = allLikesArray.find((element) => element.item_id === id).likes;
-      // const spanCount = document.querySelectorAll('.likes-count');
       like.parentElement.querySelector(`#like${id}`).textContent = `${getNewLikes} Likes`;
     });
   });

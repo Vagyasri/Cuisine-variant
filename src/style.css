@@ -153,6 +153,7 @@ footer {
   align-content: space-around;
   grid-template-columns: auto auto auto;
   grid-column-gap: 6rem;
+  grid-row-gap: 4rem;
   padding-left: 0;
 }
 
@@ -180,6 +181,7 @@ footer {
 
 button {
   cursor: pointer;
+  margin-top: 2rem;
 }
 
 .main-container {
@@ -195,4 +197,12 @@ button {
 .list-content {
   list-style-type: none;
   text-align: left;
+
+.item-list {
+  position: relative;
+  top: 6rem;
+}
+
+.item-list h3 {
+  text-align: center;
 }
