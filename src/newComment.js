@@ -40,7 +40,7 @@ const commentAccess = async (id) => {
     commentList.appendChild(listContent);
   });
 
-  console.log(finalResult.length);
+  // console.log(finalResult.length);
 };
 
 export { displayComment, commentAccess };
