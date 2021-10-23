@@ -145,7 +145,7 @@ footer {
 
 .meal-list {
   display: grid;
-  margin-top: 5rem;
+  margin-top: 9rem;
   align-content: space-around;
   grid-template-columns: auto auto auto;
   grid-column-gap: 6rem;
@@ -198,10 +198,15 @@ button {
 }
 
 .item-list {
-  position: relative;
+  position: absolute;
   top: 6rem;
 }
 
 .item-list h3 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.name {
   text-align: center;
 }

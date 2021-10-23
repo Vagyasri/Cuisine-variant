@@ -27,9 +27,11 @@ const loadData = async () => {
     display += `   
       <li id="${element.idCategory}">
       <img src="${element.strCategoryThumb}" alt="Food">
+      <div class="name">
       <h4>${element.strCategory}</h4>
       <i data-id="${element.idCategory}" class="far fa-heart like"></i>
       <span id="like${element.idCategory}" class="likes-count">${likeVariable} Likes</span>
+      </div>
       <button type="submit" class="pop" id="${element.idCategory}">Comments</button>
       </li>`;
   });
