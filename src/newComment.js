@@ -24,7 +24,7 @@ const displayComment = () => {
     const commentList = document.querySelector('.comment-list');
     const listContent = document.createElement('li');
     listContent.classList = 'list-content';
-    listContent.innerText = `${name.value} ${comment.value}`;
+    listContent.innerText = `${Date.value} ${name.value} ${comment.value}`;
     name.value = '';
     comment.value = '';
     commentList.appendChild(listContent);
@@ -47,7 +47,7 @@ const commentAccess = async (id) => {
     commentList.appendChild(listContent);
   });
 
-  console.log(finalResult);
+  // console.log(finalResult);
 };
 
 export { displayComment, commentAccess };
