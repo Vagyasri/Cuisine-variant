@@ -6,8 +6,7 @@ const likeId = async (id) => {
     {
       method: 'POST',
       body: JSON.stringify({
-        // eslint-disable-next-line quote-props
-        'item_id': id,
+        item_id: id,
       }),
       headers: {
         'Content-type': 'application/json',
@@ -24,7 +23,6 @@ const getLikes = async () => {
 
 const allHearts = async () => {
   const allLikes = document.querySelectorAll('.like');
-  console.log(allLikes);
   allLikes.forEach((like) => {
     like.addEventListener('click', async (e) => {
       const id = e.target.getAttribute('data-id');
