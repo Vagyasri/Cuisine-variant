@@ -1,5 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.popup-wrapper {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.popup-wrapper.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.comment-popup {
+  background-color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 600px;
+  height: 500px;
+  max-width: 100%;
+  overflow-y: scroll;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.popup-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.popup-bottom {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 30px 0;
+}
+
+.close {
+  align-self: flex-end;
+  border-radius: 5px;
 }
 
 header {
@@ -31,50 +95,33 @@ header {
 }
 
 .meal-img {
-  height: 400px;
+  height: 300px;
   width: 400px;
 }
 
-.popup-top {
-  display: flex;
-  flex-direction: column;
-  margin: 10px 300px;
-}
-
-.popup-bottom {
-  display: flex;
-  flex-direction: column;
-  margin: 20px 500px;
-  padding: 30px 0;
-}
-
-.userName {
+.userName,
+.comm-sub,
+.userComment {
   padding: 5px;
-  align-self: center;
+  align-self: flex-start;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.comm-sub {
+  background-color: #fff;
+  box-shadow: 3px 2px;
+  font-weight: 600;
+  font-size: 25px;
+  width: 170px;
 }
 
 .userComment {
   margin: 15px 0;
-  padding: 5px;
-}
-
-.comm-sub {
-  padding: 5px;
-  align-self: flex-end;
 }
 
 .meal-data {
   text-align: center;
-}
-
-.com-count {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.like-count {
-  font-size: large;
 }
 
 .description {
@@ -98,9 +145,11 @@ footer {
 
 .meal-list {
   display: grid;
-  margin-left: 50%;
+
+  /* margin-left: 50%; */
   margin-top: 5rem;
-  transform: translateX(-50%);
+
+  /* transform: translateX(-50%); */
   align-content: space-around;
   grid-template-columns: auto auto auto;
   grid-column-gap: 6rem;
@@ -120,7 +169,7 @@ footer {
   margin-bottom: 7rem;
 }
 
-button {
+.pop {
   border: 2px solid black;
   background-color: #fff;
   box-shadow: 3px 2px;
@@ -128,6 +177,9 @@ button {
   font-size: 16px;
   margin-left: 50%;
   transform: translateX(-50%);
+}
+
+button {
   cursor: pointer;
   margin-top: 2rem;
 }
@@ -141,6 +193,10 @@ button {
   cursor: pointer;
   color: red;
 }
+
+.list-content {
+  list-style-type: none;
+  text-align: left;
 
 .item-list {
   position: relative;
