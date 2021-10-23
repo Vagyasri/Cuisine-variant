@@ -25,8 +25,8 @@ const displayComment = () => {
 };
 
 const commentAccess = async (id) => {
-  const x = `?item_id=${id}`;
-  const finalUrl = await fetch(`${commentUrl}${x}`);
+  const getPath = `?item_id=${id}`;
+  const finalUrl = await fetch(`${commentUrl}${getPath}`);
   const finalResult = await finalUrl.json();
   // return finalResult;
 
