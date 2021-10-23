@@ -3,38 +3,10 @@ const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstone
 
 const commentUrl = `${baseUrl}${commentId}/comments`;
 
-const getComments = async () => {
-  const response = await fetch(commentUrl);
-  const data = await response.json();
-  return data;
-};
-
-// const addComment = async (date, name, comment) => {
-//   fetch(commentUrl, {
-//     method: 'POST',
-//     mode: 'cors',
-//     headers: {
-//       'Content-type': 'application/json',
-//     },
-//     body: JSON.stringify({
-//       creation_date: date.value,
-//       username: name.value,
-//       comment: comment.value,
-//     }),
-//   })
-//     .then((response) => response.json())
-//     .then(async () => {
-//       const allComments = await getComments();
-//       // eslint-disable-next-line no-use-before-define
-//       displayComment(allComments);
-//     });
-// };
-
 const displayComment = () => {
   const form = document.forms['form-dom'];
   const name = document.querySelector('.userName');
   const comment = document.querySelector('.userComment');
-  // const x = `?item_id=${name.id}`;
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -48,18 +20,27 @@ const displayComment = () => {
       headers: {
         'Content-type': 'application/json',
       },
-    }).then((response) => response.text()).then((data) => {
-      console.log(data);
-      const commentList = document.querySelector('.comment-list');
-      const listContent = document.createElement('li');
-      listContent.classList = 'list-content';
-      listContent.innerText = `${name.value} : ${comment.value}`;
-      name.value = '';
-      comment.value = '';
-      commentList.appendChild(listContent);
-    });
-    // addComment();
+    }).then((response) => response.text()).then((data) => data);
   });
 };
 
-export default displayComment;
+const commentAccess = async (id) => {
+  const x = `?item_id=${id}`;
+  const finalUrl = await fetch(`${commentUrl}${x}`);
+  const finalResult = await finalUrl.json();
+  // return finalResult;
+
+  finalResult.forEach((result) => {
+    const commentList = document.querySelector('.comment-list');
+    const listContent = document.createElement('li');
+    listContent.classList = 'list-content';
+    listContent.innerText = `${result.username} ${result.comment}`;
+    result.username = '';
+    result.comment = '';
+    commentList.appendChild(listContent);
+  });
+
+  console.log(finalResult.length);
+};
+
+export { displayComment, commentAccess };
