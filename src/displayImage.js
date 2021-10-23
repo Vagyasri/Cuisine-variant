@@ -15,7 +15,6 @@ const getMeals = async () => {
 
 const loadData = async () => {
   const likesStorage = JSON.parse(localStorage.getItem('likes') || '[]');
-  console.log(likesStorage);
   const displayData = await getMeals();
   let display = '';
   displayData.forEach((element) => {

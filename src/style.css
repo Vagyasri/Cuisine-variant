@@ -145,11 +145,7 @@ footer {
 
 .meal-list {
   display: grid;
-
-  /* margin-left: 50%; */
   margin-top: 5rem;
-
-  /* transform: translateX(-50%); */
   align-content: space-around;
   grid-template-columns: auto auto auto;
   grid-column-gap: 6rem;
@@ -177,11 +173,11 @@ footer {
   font-size: 16px;
   margin-left: 50%;
   transform: translateX(-50%);
+  margin-top: 2rem;
 }
 
 button {
   cursor: pointer;
-  margin-top: 2rem;
 }
 
 .main-container {
