@@ -24,6 +24,7 @@ const getLikes = async () => {
 
 const allHearts = async () => {
   const allLikes = document.querySelectorAll('.like');
+  console.log(allLikes);
   allLikes.forEach((like) => {
     like.addEventListener('click', async (e) => {
       const id = e.target.getAttribute('data-id');
