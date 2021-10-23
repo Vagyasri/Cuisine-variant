@@ -36,7 +36,7 @@ const commentAccess = async (id) => {
   const finalUrl = await fetch(`${commentUrl}${getPath}`);
   const finalResult = await finalUrl.json();
   // return finalResult;
-
+  const commentCount = document.querySelector('.comments-count');
   finalResult.forEach((result) => {
     const commentList = document.querySelector('.comment-list');
     const listContent = document.createElement('li');
@@ -46,6 +46,7 @@ const commentAccess = async (id) => {
     result.comment = '';
     commentList.appendChild(listContent);
   });
+  commentCount.innerText = `(${finalResult.length} Comments)`;
 
   // console.log(finalResult);
 };
