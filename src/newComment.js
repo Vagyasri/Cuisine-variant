@@ -21,6 +21,13 @@ const displayComment = () => {
         'Content-type': 'application/json',
       },
     }).then((response) => response.text()).then((data) => data);
+    const commentList = document.querySelector('.comment-list');
+    const listContent = document.createElement('li');
+    listContent.classList = 'list-content';
+    listContent.innerText = `${name.value} ${comment.value}`;
+    name.value = '';
+    comment.value = '';
+    commentList.appendChild(listContent);
   });
 };
 
